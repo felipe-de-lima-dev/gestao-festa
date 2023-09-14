@@ -1,0 +1,44 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <title>Editar</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" media="all" href="../../../css/gtvg.css" th:href="@{/css/gtvg.css}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <body>
+    	<div class="container">
+		   <label><h1>
+	       		Editar cadastro
+	       </h1></label>
+	       <br><br>
+	       <form action="/convidado/salvar" method="post" th:object="${convidado}">
+		       <label for="nome">
+		             Nome do convidado:
+		       </label>
+	           <br>
+	           <input type="hidden" id="nome" name="id" th:field="*{idConvidado}" class="form-control">
+	           <input type="text" id="nome" name="nome" th:field="*{nome}" class="form-control">
+	           <br><br>
+	           <label for="acompanhante">
+	               Quantidade de acompanhantes:
+	           </label>
+	           <br>
+	           <input type="number" name="acompanhante" id="acompanhante" th:field="*{acompanhante}" class="form-control">
+	           <br>
+	           <input type="submit" value="Salvar" class="btn btn-primary">
+	           <br />
+	           <br />
+	           <a href="/">Return to home</a>
+           </form>
+    	</div>
+	</body>
+</html>
