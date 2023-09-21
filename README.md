@@ -1,3 +1,3 @@
 # Gestão de Convidados de uma Festa
 
-Aplicação WEB criada em Springboot.
+Aplicação WEB criada com Springboot.
