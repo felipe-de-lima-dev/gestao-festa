@@ -32,7 +32,6 @@ public class LoginController {
 	
 	@PostMapping("/efetuar-login")
 	public String doLogin(Login login) {
-		
 		Login user = repo.findByEmail(login.getEmail());
 		if(login.getEmail().equals(user.getEmail()) && login.getSenha().equals(user.getSenha())) {
 			return "redirect:convidado/lista-convidados";

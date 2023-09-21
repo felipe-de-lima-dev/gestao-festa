@@ -60,4 +60,5 @@ public class ConvidadoController {
 		view.addObject("convidado", c);
 		return view;
 	}
+	
 }
